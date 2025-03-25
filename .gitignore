@@ -1,0 +1,4 @@
+# Git Ignore File 
+.Dockerfile.swo
+.Dockerfile.swp
+text2.txt/

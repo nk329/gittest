@@ -1,1 +1,13 @@
 git 테스트 중입니다 두번째
+
+PowerShell에서는 폴더 이름에 공백(띄어쓰기)이 포함된 경우 따옴표(" 또는 ')로 묶어줘야 합니다.
+
+✅ 해결 방법
+cd "git 테스트2"
+or
+cd 'git 테스트2'
+
+cd 반대말 cd ..			
+
+
+notepad text2.txt
