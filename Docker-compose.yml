@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:  
+    image: "alpine:latest"
+    container_name: main_app
+    ports:
+      - "8080:8080"   # 컨테이너 밖에서 안으로 가는 구조
+    volumes:
+      - app_logs:/var/log/app   # 로그 파일을 공유할 볼륨
+    command: ["sh", "-c", "mkdir -p /var/log/app && while true; do echo $(date)' - 로그 메세지 예제' >> /var/log/app/app.log; sleep 2; done"]
+
+
+  log-collector:
+    image: fluent/fluentd    # 로그 수집 툴
+    container_name: sidecar_logger
+    depends_on:    # 의존성 설정, app이 떠야 로그 컬렉터가 동작
+      - app
+    volumes:
+      - app_logs:/fluentd/log   # 동일한 볼륨을 마운트하여 로그 공유
+      - ./fluentd/conf:/fluentd/etc   # 컨테이너 설정 파일을 외부에서 가져옴
+    ports:
+      - "24224:24224"    # Fluentd 기본 포트
+
+
+volumes:
+  app_logs:   # 로그 파일을 위한 볼륨 정의
+
