@@ -5,6 +5,7 @@ services:
     image: ssh-server
     build: ./bastion
     container_name: bastion
+    dockerfile: ssh-server.Dockerfile
     ports:
       - "2222:22"  
     networks:
