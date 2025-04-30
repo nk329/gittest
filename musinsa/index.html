@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>무신사 스토어</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="top-nav">
+      <div class="left-menu">
+        <button class="menu-btn">☰</button>
+        <a href="#" class="logo">MUSINSA</a>
+        <nav class="main-nav">
+          <a href="https://www.musinsa.com/main/musinsa/recommend?gf=A">MUSINSA</a>
+          <a href="https://www.musinsa.com/main/beauty/recommend?gf=A">BEAUTY</a>
+          <a href="https://www.musinsa.com/main/player/recommend?gf=A">PLAYER</a>
+          <a href="https://www.musinsa.com/main/outlet/recommend?gf=A">OUTLET</a>
+          <a href="https://www.musinsa.com/main/boutique/recommend?gf=A">BOUTIQUE</a>
+          <a href="https://www.musinsa.com/main/sneaker/recommend?gf=A">SHOES</a>
+          <a href="https://www.musinsa.com/main/kids/recommend?gf=A">KIDS</a>
+          <span>|</span>
+          <a href="https://www.musinsa.com/snap/main/recommend">(S) SNAP</a>
+        </nav>
+      </div>
+      <div class="right-menu">
+        <a href="https://www.musinsa.com/offline">오프라인 스토어</a>
+        <div class="search-container">
+          <a href="javascript:void(0)" class="search-trigger">검색</a>
+          <div class="search-popup">
+            <div class="search-header">
+              <input type="text" placeholder="검색어를 입력하세요" />
+              <button class="close-search">✕</button>
+            </div>
+            <div class="search-content">
+              <div class="recent-keywords">
+                <h3>인기 검색어</h3>
+                <ol>
+                  <li><a href="#">바람막이</a><span class="rank-change up">▲</span></li>
+                  <li><a href="#">셔츠</a><span class="rank-change down">▼</span></li>
+                  <li><a href="#">반팔</a><span class="rank-change stay">-</span></li>
+                  <li><a href="#">무신사 스탠다드</a><span class="rank-change up">▲</span></li>
+                  <li><a href="#">버뮤다팬츠</a><span class="rank-change up">▲</span></li>
+                  <li><a href="#">아디다스</a><span class="rank-change down">▼</span></li>
+                  <li><a href="#">반팔티</a><span class="rank-change stay">-</span></li>
+                  <li><a href="#">빈폴티</a><span class="rank-change up">▲</span></li>
+                  <li><a href="#">마스마룰즈</a><span class="rank-change down">▼</span></li>
+                  <li><a href="#">매종 마르지엘라</a><span class="rank-change up">▲</span></li>
+                </ol>
+              </div>
+              <div class="popular-keywords">
+                <h3>급상승 검색어</h3>
+                <ol>
+                  <li><a href="#">아레나 디즈니</a><span class="rank-number">1</span></li>
+                  <li><a href="#">롤</a><span class="rank-number">2</span></li>
+                  <li><a href="#">레쉬가드</a><span class="rank-number">3</span></li>
+                  <li><a href="#">나이키 반바지</a><span class="rank-number">4</span></li>
+                  <li><a href="#">예일</a><span class="rank-number">5</span></li>
+                  <li><a href="#">헤지스</a><span class="rank-number">6</span></li>
+                  <li><a href="#">마스마룰즈</a><span class="rank-number">7</span></li>
+                  <li><a href="#">아미</a><span class="rank-number">8</span></li>
+                  <li><a href="#">나이키 판바지</a><span class="rank-number">9</span></li>
+                  <li><a href="#">매종 마르지엘라</a><span class="rank-number">10</span></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.musinsa.com/app/mypage/like">좋아요</a>
+        <a href="https://www.musinsa.com/app/mypage">마이</a>
+        <a href="https://www.musinsa.com/app/cart">장바구니</a>
+        <a href="https://www.musinsa.com/app/mypage/notification" class="notification">🔔</a>
+      </div>
+    </div>
+
+    <div class="main-search">
+      <div class="search-wrapper">
+        <input type="text" placeholder="전남규가 선택한 뷰티 단독 상품" />
+        <button type="submit">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="category-nav">
+      <a href="#" class="active">추천</a>
+      <a href="#">랭킹</a>
+      <a href="#">세일</a>
+      <a href="#">브랜드</a>
+      <a href="#">발매</a>
+      <a href="#">클렌드</a>
+      <a href="#">5월 신발장</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="carousel">
+      <button class="prev-btn">❮</button>
+      <div class="carousel-container">
+        <div class="carousel-item">
+          <img src="images/firstbuy1.png" alt="스티치 협업 컬렉션">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/shoes.png" alt="몽텅과 함께한">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/firstbuy.png" alt="클래식 트렌디">
+          <div class="carousel-caption">
+          </div>
+        </div>
+      </div>
+      <button class="next-btn">❯</button>
+    </div>
+
+    <!-- Product Categories -->
+    <div class="product-categories">
+      <div class="category-list">
+        <a href="#" class="category-item">
+          <i class="fas fa-tshirt"></i>
+          <span>여름 신상</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-won-sign"></i>
+          <span>롤랜드 990원</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-compass"></i>
+          <span>디스커버리 데이</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-music"></i>
+          <span>2NE1 x FRGMT</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-car-side"></i>
+          <span>이니셜D x 시로즈</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-shirt"></i>
+          <span>인기 무료배송</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-percent"></i>
+          <span>연휴 특가</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-wine-bottle"></i>
+          <span>여행 간식 꾸준</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-sun"></i>
+          <span>여성 여름 신상</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-shoe-prints"></i>
+          <span>어린이날 페스티벌</span>
+        </a>
+      </div>
+      <div class="category-list second-row">
+        <a href="#" class="category-item">
+          <i class="fas fa-store"></i>
+          <span>오직 무신사 뷰티</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-bolt"></i>
+          <span>타임세일</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-user-group"></i>
+          <span>체험단</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-gift"></i>
+          <span>이벤트</span>
+        </a>
+        <a href="#" class="category-item">
+          <i class="fas fa-location-dot"></i>
+          <span>오프라인 편집샵</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="product-section">
+      <div class="section-header">
+        <h2>스포츠 중목 아이템 추천</h2>
+        <div class="category-tags">
+          <span class="tag active">등산/아웃도어</span>
+          <a href="#" class="more-link">더보기</a>
+        </div>
+      </div>
+
+      <button class="slider-nav prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slider-nav next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20250207/4768373/4768373_17389103842075_big.jpg?w=1200" alt="노스페이스 코트">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">노스페이스</div>
+            <div class="name">NJ5JR00B 코어 후드 집업_CREAM</div>
+            <div class="price">
+              <span class="discount">30%</span>
+              <span class="amount">97,300원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20240405/4028502/4028502_17435702978747_big.jpg?w=1200" alt="코닥">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">코닥</div>
+            <div class="name">컬러라벨 쿠쿠 삭스 5PC</div>
+            <div class="price">
+              <span class="amount">34,900원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20240220/3885816/3885816_17108990444874_big.jpg?w=1200" alt="마뗑">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">마뗑</div>
+            <div class="name">[WOMEN] 트레일 크롭 경량 자켓 LIGHT BLUE</div>
+            <div class="price">
+              <span class="discount">50%</span>
+              <span class="amount">89,000원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20241107/4596943/4596943_17312992805624_big.jpg?w=1200" alt="핑크브로">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">핑크브로</div>
+            <div class="name">40L 멀티타터 백팩</div>
+            <div class="price">
+              <span class="discount">38%</span>
+              <span class="amount">19,900원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20230227/3109768/3109768_16775691034512_big.jpg?w=1200" alt="아디다스">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">아디다스</div>
+            <div class="name">울트라부스트 라이트</div>
+            <div class="price">
+              <span class="discount">25%</span>
+              <span class="amount">159,000원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20240918/4442054/4442054_17296454257019_big.jpg?w=1200" alt="나이키">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">나이키</div>
+            <div class="name">드라이핏 러닝 자켓</div>
+            <div class="price">
+              <span class="discount">40%</span>
+              <span class="amount">79,000원</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Section 2 -->
+    <section class="product-section">
+      <div class="section-header">
+        <h2>신상품 위클리 베스트</h2>
+        <div class="category-tags">
+          <span class="tag active">전체</span>
+          <a href="#" class="more-link">더보기</a>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20230912/3552391/3552391_16945924141600_big.jpg?w=1200" alt="아디다스">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">아디다스</div>
+            <div class="name">가젤 인도어 - 블랙 / GX9834</div>
+            <div class="price">
+              <span class="discount">20%</span>
+              <span class="amount">119,200원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20240321/3976350/3976350_17115804993997_big.jpg?w=1200" alt="나이키">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">나이키</div>
+            <div class="name">에어포스 1 '07 - 화이트 / CW2288-111</div>
+            <div class="price">
+              <span class="amount">139,000원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20180703/810033/810033_16890486129690_big.jpg?w=1200" alt="컨버스">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">컨버스</div>
+            <div class="name">척 70 클래식 블랙 162058C</div>
+            <div class="price">
+              <span class="discount">30%</span>
+              <span class="amount">69,300원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20140630/104238/104238_10_big.jpg?w=1200" alt="반스">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">반스</div>
+            <div class="name">올드스쿨 클래식 - 블랙:화이트</div>
+            <div class="price">
+              <span class="amount">79,000원</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Section 3 -->
+    <section class="product-section">
+      <div class="section-header">
+        <h2>무신사 프리미엄</h2>
+        <div class="category-tags">
+          <span class="tag active">럭셔리</span>
+          <a href="#" class="more-link">더보기</a>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20250114/4719184/4719184_17373411797746_big.jpg?w=1200" alt="구찌">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">구찌</div>
+            <div class="name">GG 마몬트 카드 케이스 지갑</div>
+            <div class="price">
+              <span class="discount">15%</span>
+              <span class="amount">390,000원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20250114/4719262/4719262_17373394408749_big.jpg?w=1200" alt="생로랑">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">생로랑</div>
+            <div class="name">모노그램 카드 홀더</div>
+            <div class="price">
+              <span class="amount">459,000원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20241125/4634791/4634791_17327632092525_big.jpg?w=1200" alt="메종마르지엘라">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">메종마르지엘라</div>
+            <div class="name">타비 로퍼 - 블랙</div>
+            <div class="price">
+              <span class="discount">20%</span>
+              <span class="amount">890,000원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20230418/3242492/3242492_16891282579038_big.jpg?w=1200" alt="톰브라운">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">톰브라운</div>
+            <div class="name">삼선 카디건 - 네이비</div>
+            <div class="price">
+              <span class="amount">1,290,000원</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Section 4 -->
+    <section class="product-section">
+      <div class="section-header">
+        <h2>셀렉트 아우터</h2>
+        <div class="category-tags">
+          <span class="tag active">봄 아우터</span>
+          <a href="#" class="more-link">더보기</a>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://img.soldout.co.kr/item_thumb/2024/03/22/fd351c1b-0067-41b7-9726-77d19231db6b.png/soldout/resize/1000/optimize" alt="우영미">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">우영미</div>
+            <div class="name">오버사이즈 트렌치코트</div>
+            <div class="price">
+              <span class="discount">25%</span>
+              <span class="amount">445,000원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20220113/2307026/2307026_1_big.jpg?w=1200" alt="커버낫">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">커버낫</div>
+            <div class="name">에센셜 블루종 자켓</div>
+            <div class="price">
+              <span class="amount">129,000원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20250114/4719129/4719129_17376880588583_big.jpg?w=1200" alt="스톤아일랜드">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">스톤아일랜드</div>
+            <div class="name">나일론 메탈 재킷</div>
+            <div class="price">
+              <span class="discount">30%</span>
+              <span class="amount">890,000원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://image.msscdn.net/thumbnails/images/goods_img/20250217/4794628/4794628_17404592954302_big.jpg?w=1200" alt="아크테릭스">
+            <button class="like-button">♡</button>
+          </div>
+          <div class="product-info">
+            <div class="brand">아크테릭스</div>
+            <div class="name">베타 LT 재킷</div>
+            <div class="price">
+              <span class="amount">750,000원</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
