@@ -199,4 +199,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   productGrid.addEventListener('scroll', updateButtonVisibility);
   updateButtonVisibility(); // 초기 버튼 상태 설정
+
+  // Footer 아코디언 메뉴
+  document.querySelectorAll('.accordion-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const accordionContent = button.nextElementSibling;
+      button.classList.toggle('active');
+      
+      if (button.classList.contains('active')) {
+        accordionContent.classList.add('active');
+      } else {
+        accordionContent.classList.remove('active');
+      }
+    });
+  });
 }); 
