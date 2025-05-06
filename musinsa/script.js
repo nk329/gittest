@@ -214,3 +214,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 }); 
+
+function updateTimesaleTimer() {
+  const timerElem = document.getElementById('timesale-timer');
+  if (!timerElem) return;
+
+  // 다음날 0시(자정)까지 남은 시간 계산
+  const now = new Date();
+  const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+  const diff = tomorrow - now;
+
+  if (diff > 0) {
+    const hours = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, '0');
+    const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+    const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+    timerElem.textContent = `${hours}:${minutes}:${seconds}`;
+  } else {
+    timerElem.textContent = "00:00:00";
+  }
+}
+
+// 1초마다 타이머 갱신
+setInterval(updateTimesaleTimer, 1000);
+updateTimesaleTimer();
